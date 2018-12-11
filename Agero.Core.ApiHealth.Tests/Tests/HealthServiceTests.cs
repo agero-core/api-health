@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Agero.Core.ApiHealth.Models;
+﻿using Agero.Core.ApiHealth.Models;
 using Agero.Core.ApiHealth.Tests.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Agero.Core.ApiHealth.Tests
 {

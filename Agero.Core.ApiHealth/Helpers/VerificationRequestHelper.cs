@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Agero.Core.ApiHealth.Models;
+using Agero.Core.Checker;
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Agero.Core.ApiHealth.Models;
-using Agero.Core.Checker;
 
 namespace Agero.Core.ApiHealth.Helpers
 {
@@ -53,11 +53,11 @@ namespace Agero.Core.ApiHealth.Helpers
         {
             return
                 errorDetails == null
-                    ? CreateSuccesResult(type, description, elapsedMilliseconds)
+                    ? CreateSuccessResult(type, description, elapsedMilliseconds)
                     : CreateErrorResult(type, description, elapsedMilliseconds, errorDetails, includeErrorDetails);
         }
 
-        private static VerificationResult CreateSuccesResult(string type, string description, long elapsedMilliseconds)
+        private static VerificationResult CreateSuccessResult(string type, string description, long elapsedMilliseconds)
         {
             return
                 new VerificationResult

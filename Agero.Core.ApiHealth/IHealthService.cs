@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using Agero.Core.ApiHealth.Models;
+﻿using Agero.Core.ApiHealth.Models;
+using System.Threading.Tasks;
 
 namespace Agero.Core.ApiHealth
 {

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using Agero.Core.ApiHealth.Models;
+﻿using Agero.Core.ApiHealth.Models;
 using Agero.Core.Checker;
 using Agero.Core.RestCaller;
 using Agero.Core.RestCaller.Extensions;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Net;
 
 namespace Agero.Core.ApiHealth.Helpers
 {

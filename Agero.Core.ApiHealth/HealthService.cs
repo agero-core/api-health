@@ -1,9 +1,9 @@
-﻿using Agero.Core.Checker;
+﻿using Agero.Core.ApiHealth.Helpers;
+using Agero.Core.ApiHealth.Models;
+using Agero.Core.Checker;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Agero.Core.ApiHealth.Helpers;
-using Agero.Core.ApiHealth.Models;
 
 namespace Agero.Core.ApiHealth
 {

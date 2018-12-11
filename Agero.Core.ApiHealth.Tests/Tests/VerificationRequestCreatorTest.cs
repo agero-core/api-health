@@ -1,13 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Agero.Core.ApiHealth.Helpers;
+using Agero.Core.ApiHealth.Models;
+using Agero.Core.ApiHealth.Tests.Helpers;
+using Agero.Core.ApiHealth.Tests.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
-using Agero.Core.ApiHealth.Helpers;
-using Agero.Core.ApiHealth.Models;
-using Agero.Core.ApiHealth.Tests.Helpers;
-using Agero.Core.ApiHealth.Tests.Models;
-using Newtonsoft.Json;
 
 namespace Agero.Core.ApiHealth.Tests
 {
