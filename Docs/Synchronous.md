@@ -12,9 +12,6 @@ IHealthService service =
                 );
 ```
 
-Please use **VerificationRequestCreator.CreateSyncHealthRequest** or **VerificationRequestCreator.CreateAsyncHealthRequest** only if your API conforms to the [health api design](./HealthAPI/HealthApiDesign.md).
-
-
 Create an array of verification requests:
 ```csharp
 var verificationRequests =
@@ -53,6 +50,8 @@ var verificationRequests =
                     )
                 };
 ```
+
+**Note:** Please use **VerificationRequestCreator.CreateSyncHealthRequest** only if your API conforms to the [health api design](./HealthApiDesign.md).
 
 Execute all verification requests and compose health object:
 ```csharp

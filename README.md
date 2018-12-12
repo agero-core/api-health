@@ -9,10 +9,6 @@ Please see below pages for examples of Asynchronous and Synchronous use cases of
 * [Asynchronous](./Docs/Asynchronous.md)
 * [Synchronous](./Docs/Synchronous.md)
 
-## Health API(/health) design:
-
-Please use **VerificationRequestCreator.CreateSyncHealthRequest** or **VerificationRequestCreator.CreateAsyncHealthRequest** only if your API conforms to the [health api design](./HealthAPI/HealthApiDesign.md).
-
 ## Running Tests:
 
 Create the json file **test-settings.json** with the below configuration under the projects **Agero.Core.ApiHealth.Tests**.
@@ -20,10 +16,11 @@ Create the json file **test-settings.json** with the below configuration under t
 ```json
 {
   "ApplicationUri": "<Your application Url>",
+  // Headers is optional.
   "Headers": {
+      // Add one or more header key:value pairs as required. 
       "Key_1" : "Value_1",
-      "Key_2" : "Value_2",
-      ...
+      "Key_2" : "Value_2"
   }
 }
 ```
