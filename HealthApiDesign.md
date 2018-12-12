@@ -21,7 +21,7 @@ The API can take a single query parameter, **mode**, which can take the below va
 
 **Response:**
 
-The API response body is a JSON object which conforms to [Health](../Agero.Core.ApiHealth/Models/Health.cs).
+The API response body is a JSON object which conforms to [Health](./Agero.Core.ApiHealth/Models/Health.cs).
 
 * **verifications** - Required array of the following JSON objects:
     * **verificationType** - Required string field which provides short description of verification.
