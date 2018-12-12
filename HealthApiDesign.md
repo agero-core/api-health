@@ -4,7 +4,7 @@ Health API design specification, specifies the standard to perform API health ch
 
 To conform to the Health API design spec, the Restful API should support the below:
 
-**Request:**
+## Request:
 
     HTTP Method: GET
     URL: /health
@@ -19,7 +19,13 @@ The API can take a single query parameter, **mode**, which can take the below va
 
 * **full** : Used to check the health of all the components. Health check mode is full by default.
 
-**Response:**
+## Response:
+
+**HTTP Status Code:**
+
+API by default must return 200 OK HTTP status code.
+
+**Body:**
 
 The API response body is a JSON object which conforms to [Health](./Agero.Core.ApiHealth/Models/Health.cs).
 

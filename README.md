@@ -1,5 +1,8 @@
 # Api Health
 
+[![NuGet Version](http://img.shields.io/nuget/v/Agero.Core.ApiHealth.svg?style=flat)](https://www.nuget.org/packages/Agero.Core.ApiHealth/) 
+[![NuGet Downloads](http://img.shields.io/nuget/dt/Agero.Core.ApiHealth.svg?style=flat)](https://www.nuget.org/packages/Agero.Core.ApiHealth/)
+
 API Health is a library that determines API Health by getting the health of all the dependent API Components.
 
 ## Usage:
