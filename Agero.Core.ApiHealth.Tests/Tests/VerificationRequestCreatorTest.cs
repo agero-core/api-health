@@ -14,23 +14,16 @@ namespace Agero.Core.ApiHealth.Tests
     [TestClass]
     public class VerificationRequestCreatorTest
     {
-        private static ApiHealthTestsSetup _apiHealthTestsSetupInfo;
-
-        [ClassInitialize]
-        public static void LoggerTestsInitialize(TestContext context)
+        [TestMethod]
+        [TestCategory("IntegrationHealth")]
+        public async Task CreateAsyncHealthRequest_When_Request_Is_Health_Request()
         {
             Assert.IsTrue(File.Exists(@"test-settings.json"), "The configuration file test-settings.json needs to be setup. Please see https://github.com/agero-core/api-health to set it up.");
 
-            _apiHealthTestsSetupInfo = JsonConvert.DeserializeObject<ApiHealthTestsSetup>(File.ReadAllText(@"test-settings.json"));
-        }
-
-        [TestMethod]
-        [TestCategory("Integration")]
-        public async Task CreateAsyncHealthRequest_When_Request_Is_Health_Request()
-        {
             // Arrange
-            var applicationUri = new Uri(_apiHealthTestsSetupInfo.ApplicationUri);
-            var headers = _apiHealthTestsSetupInfo.Headers;
+            var apiHealthTestsSetupInfo = JsonConvert.DeserializeObject<ApiHealthTestsSetup>(File.ReadAllText(@"test-settings.json"));
+            var applicationUri = new Uri(apiHealthTestsSetupInfo.ApplicationUri);
+            var headers = apiHealthTestsSetupInfo.Headers;
             
             // Act
             var request = VerificationRequestCreator.CreateAsyncHealthRequest(ConstantHelper.VerificationType, applicationUri, HealthCheckMode.Full, ConstantHelper.VerificationDescription, headers, 5000);
@@ -44,12 +37,15 @@ namespace Agero.Core.ApiHealth.Tests
         }
 
         [TestMethod]
-        [TestCategory("Integration")]
+        [TestCategory("IntegrationHealth")]
         public void CreateSyncHealthRequest_When_Request_Is_Health_Request()
         {
+            Assert.IsTrue(File.Exists(@"test-settings.json"), "The configuration file test-settings.json needs to be setup. Please see https://github.com/agero-core/api-health to set it up.");
+
             // Arrange
-            var applicationUri = new Uri(_apiHealthTestsSetupInfo.ApplicationUri);
-            var headers = _apiHealthTestsSetupInfo.Headers;
+            var apiHealthTestsSetupInfo = JsonConvert.DeserializeObject<ApiHealthTestsSetup>(File.ReadAllText(@"test-settings.json"));
+            var applicationUri = new Uri(apiHealthTestsSetupInfo.ApplicationUri);
+            var headers = apiHealthTestsSetupInfo.Headers;
 
             // Act
             var request = VerificationRequestCreator.CreateSyncHealthRequest(ConstantHelper.VerificationType, applicationUri, HealthCheckMode.Full, ConstantHelper.VerificationDescription, headers, 5000);
