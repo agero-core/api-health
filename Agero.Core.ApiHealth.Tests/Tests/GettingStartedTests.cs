@@ -47,7 +47,7 @@ namespace Agero.Core.ApiHealth.Tests
                     VerificationRequestCreator.CreateAsyncHealthRequest
                     (
                         type: "check_some_api_with_health_endpoint",
-                        description: "Checks some API with health enpoint.",
+                        description: "Checks some API with health endpoint.",
                         applicationUri: new Uri("https://example.com/someapi"),
                         mode: HealthCheckMode.Full
                     ),

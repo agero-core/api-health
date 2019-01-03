@@ -9,11 +9,11 @@ To conform to the Health API design spec, the Restful API should support the bel
     HTTP Method: GET
     URL: /health
     Parameters : mode
-    Parameter Values:  quick, full.
+    Parameter Values: quick, full.
 
 The Restful API should expose a HTTP GET, **/health** end point. 
 
-The API can take a single query parameter, **mode**, which can take the below values - 
+The API can take a single query parameter, **mode**, which can take the below values: 
 
 * **quick** : Used to check the health of critical dependent components that are must have.
 
@@ -27,7 +27,7 @@ API by default must return 200 OK HTTP status code.
 
 **Body:**
 
-The API response body is a JSON object which conforms to [Health](./Agero.Core.ApiHealth/Models/Health.cs).
+The API response body is a JSON object with the following fields:
 
 * **verifications** - Required array of the following JSON objects:
     * **verificationType** - Required string field which provides short description of verification.

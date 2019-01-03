@@ -30,7 +30,7 @@ namespace Agero.Core.ApiHealth.Helpers
             Check.ArgumentIsNull(applicationUri, "applicationUri");
             Check.Argument(timeout > 0, "timeout > 0");
 
-            Uri uri = (mode == HealthCheckMode.Quick) ? applicationUri.Add("health?mode=quick") : applicationUri.Add("health");
+            var uri = mode == HealthCheckMode.Quick ? applicationUri.Add("health?mode=quick") : applicationUri.Add("health");
 
             return
                 new AsyncVerificationRequest
@@ -62,7 +62,7 @@ namespace Agero.Core.ApiHealth.Helpers
             Check.ArgumentIsNull(applicationUri, "applicationUri");
             Check.Argument(timeout > 0, "timeout > 0");
 
-            Uri uri = (mode == HealthCheckMode.Quick) ? applicationUri.Add("health?mode=quick") : applicationUri.Add("health");
+            var uri = mode == HealthCheckMode.Quick ? applicationUri.Add("health?mode=quick") : applicationUri.Add("health");
 
             return
                 new SyncVerificationRequest

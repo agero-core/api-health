@@ -9,16 +9,16 @@ API Health is a library that determines API Health by getting the health of all 
 
 Please see [GettingStartedTests.cs](./Agero.Core.ApiHealth.Tests/Tests/GettingStartedTests.cs) for usage details.
 
-**Note:** Please use **VerificationRequestCreator.CreateSyncHealthRequest**, **VerificationRequestCreator.CreateAsyncHealthRequest** only if your API conforms to the [health api design](./HealthApiDesign.md).
+**Note:** Please use **VerificationRequestCreator.CreateSyncHealthRequest**, **VerificationRequestCreator.CreateAsyncHealthRequest** only if your API conforms to the [health API design](./HealthApiDesign.md).
 
 ## Running Tests:
 
-If you have a Restful API that conforms to the [Health API design](./HealthApiDesign.md), create the json file **test-settings.json** with the below configuration under the projects [Agero.Core.ApiHealth.Tests](./Agero.Core.ApiHealth.Tests).
+If you have a RESTful API that conforms to the [health API design](./HealthApiDesign.md), create the json file **test-settings.json** with the below configuration under [Agero.Core.ApiHealth.Tests](./Agero.Core.ApiHealth.Tests) project.
 
 ```json
 {
-  "ApplicationUri": "<Your application Url>",
-  "Headers": {
+  "applicationUri": "<Your application Url>",
+  "headers": {
       "Key_1" : "Value_1",
       "Key_2" : "Value_2"
   }
